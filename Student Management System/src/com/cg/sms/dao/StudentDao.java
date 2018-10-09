@@ -6,7 +6,7 @@ import com.cg.sms.exception.StudentException;
 public interface StudentDao {
 
 	void addStudentDetails(Student student) throws StudentException;
-	void viewStudentDetails(Student student) throws StudentException;
+	void viewStudentDetails() throws StudentException;
 	 
 	
 }
