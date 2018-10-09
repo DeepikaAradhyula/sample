@@ -6,7 +6,7 @@ import com.cg.sms.exception.StudentException;
 public interface StudentInterface {
 	
 	public void addStudentDetails(Student student) throws StudentException;
-	public void viewStudentDetails() throws StudentException;
+	public List<Student> viewStudentDetails() throws StudentException;
 	
 //	boolean validateId(int id)  throws StudentException;
 //	boolean validateName(String name)  throws StudentException;
