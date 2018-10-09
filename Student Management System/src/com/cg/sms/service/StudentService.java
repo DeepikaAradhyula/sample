@@ -10,23 +10,26 @@ import com.cg.sms.exception.StudentException;
 
 public class StudentService implements StudentInterface {
 
-	//create object for dao??
+	StudentDao dao=new StudentDaoImpl();
 	StudentInterface service=new StudentService();
 	
 	@Override
 	public void addStudentDetails(Student student) throws StudentException {
 		// TODO Auto-generated method stub
+		return dao.addStudentDetails(student);
 		
 	}
 
 	@Override
-	public void viewStudentDetails(Student student) throws StudentException {
+	public void viewStudentDetails() throws StudentException {
 		// TODO Auto-generated method stub
+		return dao.viewStudentDetails();
+		
 		
 	}
 
 	@Override
-	public boolean validateDetails(int id,String name,String city,String phoneNo,String emailId){
+	public boolean validateDetails(int id,String name,String city,String phoneNo,String emailId) throws StudentException{
 		if(service.validateId(id)&&service.validateName(name)&&service.validateCity(city)&&service.validateMobileNo(phoneNo)&&service.validateEmailId(emailId)){
 			return true;
 		}else{
