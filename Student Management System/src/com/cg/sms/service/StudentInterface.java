@@ -8,10 +8,12 @@ public interface StudentInterface {
 	void addStudentDetails(Student student) throws StudentException;
 	void viewStudentDetails(Student student) throws StudentException;
 	
-	boolean validateId(int id)  throws StudentException;
-	boolean validateName(String name)  throws StudentException;
-	boolean validateCity(String city)  throws StudentException;
-	boolean validateMobileNo(String phoneNo)  throws StudentException;
-	boolean validateEmailId(String emailId)  throws StudentException;
+//	boolean validateId(int id)  throws StudentException;
+//	boolean validateName(String name)  throws StudentException;
+//	boolean validateCity(String city)  throws StudentException;
+//	boolean validateMobileNo(String phoneNo)  throws StudentException;
+//	boolean validateEmailId(String emailId)  throws StudentException;
 
+	
+	public boolean validateDetails(int id,String name,String city,String phoneNo,String emailId);
 }
