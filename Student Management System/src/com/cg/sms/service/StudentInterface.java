@@ -15,5 +15,5 @@ public interface StudentInterface {
 //	boolean validateEmailId(String emailId)  throws StudentException;
 
 	
-	public boolean validateDetails(int id,String name,String city,String phoneNo,String emailId);
+	public boolean validateDetails(int id,String name,String city,String phoneNo,String emailId) throws StudentException();
 }
