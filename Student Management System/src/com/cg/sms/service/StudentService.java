@@ -21,7 +21,7 @@ public class StudentService implements StudentInterface {
 	}
 
 	@Override
-	public void viewStudentDetails() throws StudentException {
+	public List<Student> viewStudentDetails() throws StudentException {
 		// TODO Auto-generated method stub
 		return dao.viewStudentDetails();
 		
