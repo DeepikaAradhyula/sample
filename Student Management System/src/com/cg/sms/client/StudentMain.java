@@ -45,25 +45,33 @@ public class StudentMain{
 		System.out.print("Enter Student Name: ");
 		String name = s.nextLine();
 		System.out.println("Enter Student ID: ");
-		int id = s.nextInt();
+		int id = Integer.parseInt(s.next());
 		System.out.println("Enter City: ");
 		String city = s.next();
+		System.out.println("Enter PhoneNO: ");
+		String phoneNo = s.next();
+		System.out.println("Enter EmailId: ");
+		String emailId = s.next();
+		
 		
 		try {
-			boolean result1 = si.validateName(name);
-			boolean result2 = si.validateId(id);
-			boolean result3 = si.validateCity(city);
-			if(result1){
+			boolean result=si.validateDetails(id,name,city,phoneNo,emailId);
+			if(result){
+				Student s=new Student();
+				s.setStudentId(id);
+				s.setStudentName(name);
+				s.setCity(city);
+				s.setPhoneNo(phoneNo);
+				s.setEmailId(emailId);
+				si.addStudentDetails(s);
+				System.out.println("Added");
 				
 			}
-			else if(result2){
-				
-			}
-			else if(result3){
-				
-			}
+			
 		} catch (StudentException e) {
-
+			System.out.println();
+			System.err.println(e.getMessage());
+			System.out.println();
 		}
 	
 			
@@ -73,7 +81,9 @@ public class StudentMain{
 
 	private void viewStudentDetails() {
 		// TODO Auto-generated method stub
-		
+		Student v=si.viewStudentDetails();
+		//or List<Student> l=si.viewStudentDetails();
+		//print student;
 	}
 	
 }
