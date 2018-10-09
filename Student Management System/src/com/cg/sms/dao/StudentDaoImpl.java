@@ -10,18 +10,19 @@ public class StudentDaoImpl implements StudentDao {
 	@Override
 	public void addStudentDetails(Student student) throws StudentException {
 		// TODO Auto-generated method stub
-		System.out.println("Name: "+student.getStudentName() +"\n Student ID: "+student.getStudentId()
-							+"\n City: "+student.getCity()+"\n Phone No: "+student.getEmailId()
-							+"\n E-mail ID: "+student.getEmailId());
+		//System.out.println("Name: "+student.getStudentName() +"\n Student ID: "+student.getStudentId()
+		//					+"\n City: "+student.getCity()+"\n Phone No: "+student.getEmailId()
+		//					+"\n E-mail ID: "+student.getEmailId());
+		//gets added to db
 	}
 
 	@Override
-	public void viewStudentDetails(Student student) throws StudentException {	
+	public List<Student> viewStudentDetails() throws StudentException {	
 		
-		System.out.println("Name: "+student.getStudentName() +"\n Student ID: "+student.getStudentId()
-				+"\n City: "+student.getCity()+"\n Phone No: "+student.getEmailId()
-				+"\n E-mail ID: "+student.getEmailId());
-		
+		//System.out.println("Name: "+student.getStudentName() +"\n Student ID: "+student.getStudentId()
+		//		+"\n City: "+student.getCity()+"\n Phone No: "+student.getEmailId()
+		//		+"\n E-mail ID: "+student.getEmailId());
+		//gets data from db and returns student details
 	}
 	
 }
