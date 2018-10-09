@@ -81,9 +81,10 @@ public class StudentMain{
 
 	private void viewStudentDetails() {
 		// TODO Auto-generated method stub
-		Student v=si.viewStudentDetails();
-		//or List<Student> l=si.viewStudentDetails();
-		//print student;
+		//Student v=si.viewStudentDetails();
+		//or
+		List<Student> l=si.viewStudentDetails();
+		//print student details;
 	}
 	
 }
